@@ -1,3 +1,19 @@
-<main>
-	{{>heading title="Index" info=data.test}}
+<main class="main">
+	<h1 class="h1">To-do list</h1>
+	<div class="add-container">
+		<input class="add-input" type="text" placeholder="Введіть задачу...">
+		<button class="add-button button">Додати</button>
+	</div>
+	<ol class="task-list">
+		<li class="task">
+			<div class="task-content">
+				<span class="task-number">1.</span>
+				<p class="task-info">Some placeholder content in a paragraph below the heading and date.</p>
+			</div>
+			<div class="task-actions">
+				<button class="button-task-do button"></button>
+				<button class="button-task-cancel button"></button>
+			</div>
+		</li>
+	</ol>
 </main>
