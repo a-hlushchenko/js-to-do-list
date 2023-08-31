@@ -172,6 +172,14 @@ export class Todo {
       'pointer-events',
       'auto',
     )
+
+    if (document.body.style.overflow === 'overlay') {
+      document.body.style.setProperty('overflow', 'hidden')
+      document.body.style.setProperty(
+        'margin-right',
+        '16px',
+      )
+    }
   }
 
   static #closeConfirmDel = () => {
@@ -184,6 +192,8 @@ export class Todo {
       'pointer-events',
       'none',
     )
+    document.body.style.removeProperty('overflow')
+    document.body.style.removeProperty('margin-right')
   }
 }
 
