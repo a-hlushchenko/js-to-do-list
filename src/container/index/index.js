@@ -176,7 +176,8 @@ export class Todo {
     if (
       window
         .getComputedStyle(document.body)
-        .height.slice(0, -2) >= window.innerHeight
+        .height.slice(0, -2) >= window.innerHeight &&
+      window.innerWidth >= 1024
     ) {
       document.body.style.setProperty('overflow', 'hidden')
       document.body.style.setProperty(
