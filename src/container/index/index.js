@@ -173,7 +173,11 @@ export class Todo {
       'auto',
     )
 
-    if (document.body.style.overflow === 'overlay') {
+    if (
+      window
+        .getComputedStyle(document.body)
+        .height.slice(0, -2) >= window.innerHeight
+    ) {
       document.body.style.setProperty('overflow', 'hidden')
       document.body.style.setProperty(
         'margin-right',
